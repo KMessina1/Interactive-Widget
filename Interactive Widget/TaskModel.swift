@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------------------------------------------------------
-    File: ContentView.swift
+    File: TaskModel.swift
   Author: Kevin Messina
  Created: 1/14/24
 Modified:
@@ -11,18 +11,18 @@ NOTES:
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+struct TaskModel: Identifiable {
+    var id: String = UUID().uuidString
+    var taskTitle: String
+    var isCompleted: Bool = false
 }
 
-#Preview {
-    ContentView()
+class TaskDataModel {
+    static let shared = TaskDataModel()
+    
+    var tasks: [TaskModel] = [
+        .init(taskTitle: "Record Video"),
+        .init(taskTitle: "Edit Video"),
+        .init(taskTitle: "Publish Video")
+    ]
 }

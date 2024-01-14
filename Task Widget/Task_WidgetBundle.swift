@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------------------------------------------------------
-    File: ContentView.swift
+    File: Task_WidgetBundle.swift
   Author: Kevin Messina
  Created: 1/14/24
 Modified:
@@ -9,20 +9,12 @@ Modified:
 NOTES:
 --------------------------------------------------------------------------------------------------------------------------*/
 
+import WidgetKit
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+@main
+struct Task_WidgetBundle: WidgetBundle {
+    var body: some Widget {
+        Task_Widget()
     }
-}
-
-#Preview {
-    ContentView()
 }
