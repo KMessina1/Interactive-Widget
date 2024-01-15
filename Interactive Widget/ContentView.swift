@@ -17,7 +17,12 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            Text("""
+                 Widget background services are now running. Close this app out and install the widget.
+
+                 Note: The Widget should operate on its own from now on independent of this app running.
+                 """)
         }
         .padding()
     }
