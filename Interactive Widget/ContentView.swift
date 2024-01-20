@@ -17,6 +17,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+                .padding(.bottom,20)
             
             Text("""
                  Widget background services are now running. Close this app out and install the widget.
